@@ -1,7 +1,7 @@
 # Purpose : This DAG automates the convertion source: json/csv/parquet/athena to target: parquet format using EMR
 # Related to : task_type - s3_to_s3
 # Created: 2021-06-25
-# Author: poojij
+# Author: poojitha jagini
 import boto3
 from datetime import datetime
 from airflow.contrib.operators.emr_create_job_flow_operator import EmrCreateJobFlowOperator
