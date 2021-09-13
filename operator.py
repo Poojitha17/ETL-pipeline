@@ -33,7 +33,7 @@ def s3_to_s3(dag,s3_path, cluster_task_name, config):
     SPARK_STEPS =[]
     for i in config['steps'].values():
         temp_args = i['step_config']
-        add_params = { "HadoopJarStep" : {"Jar": "command-runner.jar","Args": ["spark-submit","--deploy-mode","cluster","--master","yarn","--py-files","s3://airflow-ring-emr/pyspark_script/libs.zip","s3://airflow-ring-emr/pyspark_script/emr_pyspark.py",dt.strftime("%Y/%m/%d/%H/%M/%S"),s3_path,temp_args['Name']]}}
+        add_params = { "HadoopJarStep" : {"Jar": "command-runner.jar","Args": ["spark-submit","--deploy-mode","cluster","--master","yarn","--py files", "xxx.py"]}}
         temp_args.update(add_params)
     SPARK_STEPS.append(config['steps'])
 
